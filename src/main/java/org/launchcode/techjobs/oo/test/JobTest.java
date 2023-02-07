@@ -39,10 +39,10 @@ public class JobTest {
 
 
 
-    @Test
-    public void testToStringStartsAndEndsWithNewLine(){
-        Job job = new Job();
-        assertEquals(job.)
-
-    }
+//    @Test
+//    public void testToStringStartsAndEndsWithNewLine(){
+//        Job job = new Job();
+//        assertEquals(job.)
+//
+//    }
 }
