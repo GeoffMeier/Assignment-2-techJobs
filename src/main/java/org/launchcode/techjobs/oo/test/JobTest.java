@@ -35,8 +35,14 @@ public class JobTest {
         Job job2 = new Job("Tom Brady",new Employer("Fox Sports"), new Location("Broadcasting Booth"),new PositionType("Broadcaster"), new CoreCompetency("BroadCasting"));
         assertFalse(job2.equals(job1));
     }
+
+
+
+
     @Test
     public void testToStringStartsAndEndsWithNewLine(){
+        Job job = new Job();
+        assertEquals(job.)
 
     }
 }
