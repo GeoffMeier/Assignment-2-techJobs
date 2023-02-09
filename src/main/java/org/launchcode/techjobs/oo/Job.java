@@ -35,7 +35,7 @@ public class Job {
     }
 
     public String getName() {
-        return name;
+        return  name ;
     }
 
     public void setName(String name) {
@@ -84,7 +84,69 @@ public boolean equals(Object j){
         Job job = (Job) j;
         return job.getId() == getId();
     }
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
+
+
+    @Override
+    public String toString(){
+//        if (getEmployer().toString() == "" && getCoreCompetency().toString() == "" && getName().toString() == "" && getPositionType().toString() == "" && getLocation().toString() == ""){
+//            return  "OOPS! This job does not seem to exist.";
+//
+//        }
+
+        if (getName()== null) {
+            this.name = "Data not available";
+        }if (getName() == ""){
+            this.name += "Data not available";
+
+        }
+        if (getEmployer()== null) {
+            this.employer = new Employer("Data not available");
+
+
+        }if(getEmployer().toString() == ""){
+            this.employer.setValue("Data not available");
+        }
+        if(getLocation()==null) {
+            this.location = new Location("Data not available");
+        }
+        if (getLocation().toString() == ""){
+            this.location.setValue("Data not available");
+
+        }
+        if(getPositionType()==null) {
+            this.positionType = new PositionType("Data not available");
+        }
+        if (getPositionType().toString() == ""){
+            this.positionType.setValue("Data not available");
+
+        }
+        if(getCoreCompetency()==null) {
+            this.coreCompetency = new CoreCompetency ("Data not available");
+        }
+        if (getCoreCompetency().toString() == ""){
+            this.coreCompetency.setValue("Data not available");
+
+        }
+   return     "\n" + "ID: "+  + getId() +  "\n" +
+                "Name: "  + getName()  + "\n" +
+                "Employer: " + getEmployer() + "\n" +
+                "Location: " +  getLocation()+  "\n" +
+                "Position Type: " + getPositionType()  + "\n" +
+                "Core Competency: " + getCoreCompetency() + "\n";
+
+//     return    String.format("ID:  %s\n" +
+//                "Name: %s\n" +
+//                "Employer: %s\n" +
+//                "Location: %s\n" +
+//                "Position Type: %s\n" +
+//                "Core Competency: %s\n", getAnswer(String.format("%s",getId())));
+
+    }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
