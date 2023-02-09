@@ -139,12 +139,7 @@ public boolean equals(Object j){
                 "Position Type: " + getPositionType()  + "\n" +
                 "Core Competency: " + getCoreCompetency() + "\n";
 
-//     return    String.format("ID:  %s\n" +
-//                "Name: %s\n" +
-//                "Employer: %s\n" +
-//                "Location: %s\n" +
-//                "Position Type: %s\n" +
-//                "Core Competency: %s\n", getAnswer(String.format("%s",getId())));
+
 
     }
 
